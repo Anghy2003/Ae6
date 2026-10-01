@@ -1,0 +1,16 @@
+$ git branch
+  main
+* test/lab2-dobles-cobertura
+
+$ git log --oneline --decorate
+e22359d (HEAD -> test/lab2-dobles-cobertura, origin/test/lab2-dobles-cobertura) docs: analizar cobertura jacoco
+92600ca test: cubrir huecos de Reserva detectados por JaCoCo
+440c428 test: detener el flujo con reserva nula y verificar interacciones
+aaa84ee test: cubrir flujo sin disponibilidad
+d43d9db test: agregar escenarios con stub y mock
+aad0aaa (origin/main, main) docs: registrar historial publicado
+ebd6468 docs: enlazar el repositorio en el README
+be03803 docs: registrar evidencia, microexperimento de frontera y reflexion
+98f204a test: implementar casos de cancelacion y descuentos con AAA
+b038ad2 docs: disenar matriz de 15 casos de prueba
+2285b93 chore: registrar proyecto base de semana 7
