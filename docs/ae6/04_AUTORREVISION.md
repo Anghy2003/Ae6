@@ -14,7 +14,7 @@ Pull Request: https://github.com/Anghy2003/Ae6/pull/1 (`ae6/suite-pruebas` → `
 | Los casos límite están presentes | Sí | 1, 2 y 3 horas; total 0 y -0.01; id en blanco |
 | Los mocks verifican interacciones relevantes | Sí | solo se verifican efectos observables (guardar, notificar, consultar disponibilidad) y su orden; `Reserva` no se mockea |
 | La cobertura está interpretada | Sí | `docs/02_ANALISIS_COBERTURA_PLANTILLA.md` |
-| Los commits explican la evolución | Sí | 6 commits en la rama, uno por paso |
+| Los commits explican la evolución | Sí | 9 commits en la rama, uno por paso |
 | El PR indica cómo verificar | Parcial | está en `docs/03_PULL_REQUEST_PLANTILLA.md` (dentro del PR), no en el cuerpo del PR |
 | No se modificó código productivo | Sí | `git diff main..ae6/suite-pruebas -- src/main` vacío |
 
