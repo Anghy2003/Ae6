@@ -41,3 +41,23 @@ Autora: Andrea Illescas · Diseño de Software (UCOM0310) · Semana 7 · Reposit
 ```bash
 mvn clean test    # Tests run: 16, Failures: 0 -> BUILD SUCCESS
 ```
+
+---
+
+## Actividad 2 · Stub, Mock, JaCoCo y Git
+
+Rama: `test/lab2-dobles-cobertura` (creada desde `main`, conserva las pruebas de la Actividad 1).
+
+| Entregable | Dónde |
+|---|---|
+| Pruebas de `confirmar()` con Stub y Mock (7) | [`ConfirmarReservaTest.java`](src/test/java/edu/uees/testing/service/ConfirmarReservaTest.java) |
+| Pruebas agregadas a partir de JaCoCo (5) | [`ReservaTest.java`](src/test/java/edu/uees/testing/domain/ReservaTest.java) |
+| Análisis de cobertura | [`docs/02_ANALISIS_COBERTURA.md`](docs/02_ANALISIS_COBERTURA.md) |
+| Reflexión Stub vs Mock | [`docs/03_REFLEXION_STUB_MOCK.md`](docs/03_REFLEXION_STUB_MOCK.md) |
+| Salidas de `mvn clean test`, CSV de JaCoCo y capturas | `docs/lab2/` |
+
+```bash
+git switch test/lab2-dobles-cobertura
+mvn clean test                       # 28 pruebas, BUILD SUCCESS
+start target/site/jacoco/index.html  # 100 % lineas y ramas
+```
