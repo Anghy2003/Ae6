@@ -15,7 +15,7 @@ Pull Request: https://github.com/Anghy2003/Ae6/pull/1 (`ae6/suite-pruebas` → `
 | Los mocks verifican interacciones relevantes | Sí | solo se verifican efectos observables (guardar, notificar, consultar disponibilidad) y su orden; `Reserva` no se mockea |
 | La cobertura está interpretada | Sí | `docs/02_ANALISIS_COBERTURA_PLANTILLA.md` |
 | Los commits explican la evolución | Sí | 6 commits en la rama, uno por paso |
-| El PR indica cómo verificar | Sí | sección «Cómo verificar» con `mvn clean test` |
+| El PR indica cómo verificar | Parcial | está en `docs/03_PULL_REQUEST_PLANTILLA.md` (dentro del PR), no en el cuerpo del PR |
 | No se modificó código productivo | Sí | `git diff main..ae6/suite-pruebas -- src/main` vacío |
 
 ## Problemas que encontré y corregí
@@ -32,8 +32,11 @@ Pull Request: https://github.com/Anghy2003/Ae6/pull/1 (`ae6/suite-pruebas` → `
    rama ESTUDIANTE pasaba sin que fallara nada. Lo corregí con CP-28.
 3. **Las pruebas de los laboratorios no tenían ID de la matriz.** No se podía
    ir de un caso a su prueba. Agregué el ID como comentario (CP-16 a CP-27).
-4. **El PR se creó sin descripción.** Lo completé con objetivo, casos, cómo
-   verificar, cobertura, limitaciones y uso de IA.
+4. **La descripción del PR.** El PR #1 se publicó con el título automático y
+   sin descripción en GitHub. La descripción completa (objetivo, casos, cómo
+   verificar, cobertura, limitaciones y uso de IA) está en
+   `docs/03_PULL_REQUEST_PLANTILLA.md`, que forma parte del PR y se ve en
+   *Files changed*. Pendiente: copiarla también al cuerpo del PR.
 5. **La autoría de los commits.** Los commits llevaban una línea de coautor de
    la herramienta de IA. La quité de todo el historial del repositorio para
    que la autoría quede a mi nombre; el uso de IA está declarado en el PR y en
