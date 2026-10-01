@@ -78,7 +78,7 @@ python docs/ae6/mutantes.py salida.txt   # opcional: 12 errores, 12 detectados
 
 ## Uso de IA
 
-Usé un asistente de inteligencia artificial (Claude) como apoyo para
+Usé un asistente de inteligencia artificial como apoyo para
 organizar la documentación y revisar la redacción. Diseñé los casos, escribí
 y ejecuté las pruebas, hice el experimento de errores, los commits y este PR,
 y puedo explicar cada prueba y cada decisión.
