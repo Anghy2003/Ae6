@@ -12,6 +12,7 @@ import org.mockito.InOrder;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 import static org.mockito.ArgumentMatchers.any;
+import static org.mockito.Mockito.doThrow;
 import static org.mockito.Mockito.inOrder;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.never;
@@ -128,5 +129,21 @@ class ConfirmarReservaTest {
 
         // Assert: ni siquiera otra llamada distinta a guardar/enviar
         verifyNoInteractions(repository, notificador);
+    }
+
+    @Test
+    void siGuardarFallaNoSeNotificaAlEstudiante() {
+        // Arrange: hueco que la cobertura no muestra (todas las lineas ya
+        // estaban en verde). Simulo una falla del repositorio.
+        when(disponibilidad.estaDisponible(any())).thenReturn(true);
+        doThrow(new IllegalStateException("BD caida"))
+                .when(repository).guardar(any());
+        Reserva reserva = new Reserva("R-006", "NORMAL");
+
+        // Act
+        assertThrows(IllegalStateException.class, () -> servicio.confirmar(reserva));
+
+        // Assert: no se envia un correo de algo que no quedo guardado
+        verify(notificador, never()).enviarConfirmacion(any());
     }
 }
