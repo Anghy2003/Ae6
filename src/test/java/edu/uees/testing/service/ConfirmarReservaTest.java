@@ -9,8 +9,10 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.Mockito.mock;
+import static org.mockito.Mockito.never;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
 
@@ -50,5 +52,23 @@ class ConfirmarReservaTest {
         assertEquals(EstadoReserva.CONFIRMADA, reserva.getEstado());
         verify(repository).guardar(reserva);                           // Mock
         verify(notificador).enviarConfirmacion(reserva);               // Mock
+    }
+
+    @Test
+    void reservaNoDisponibleNoSeGuardaNiNotifica() {
+        // Arrange
+        when(disponibilidad.estaDisponible(any())).thenReturn(false);  // Stub
+        Reserva reserva = new Reserva("R-002", "NORMAL");
+
+        // Act
+        IllegalStateException ex = assertThrows(
+                IllegalStateException.class,
+                () -> servicio.confirmar(reserva));
+
+        // Assert
+        assertEquals("Horario no disponible", ex.getMessage());
+        assertEquals(EstadoReserva.PENDIENTE, reserva.getEstado());
+        verify(repository, never()).guardar(any());                    // Mock
+        verify(notificador, never()).enviarConfirmacion(any());        // Mock
     }
 }
