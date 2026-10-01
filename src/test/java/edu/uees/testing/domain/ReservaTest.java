@@ -12,7 +12,7 @@ import static org.junit.jupiter.api.Assertions.assertThrows;
 class ReservaTest {
 
     @Test
-    void reservaNuevaIniciaPendienteYConservaSusDatos() {
+    void reservaNuevaIniciaPendienteYConservaSusDatos() { // CP-23
         // Arrange & Act
         Reserva reserva = new Reserva("R-001", "VIP");
 
@@ -23,7 +23,7 @@ class ReservaTest {
     }
 
     @Test
-    void idNuloEsInvalido() {
+    void idNuloEsInvalido() {                          // CP-24
         // Act
         IllegalArgumentException ex = assertThrows(
                 IllegalArgumentException.class,
@@ -34,7 +34,7 @@ class ReservaTest {
     }
 
     @Test
-    void idEnBlancoEsInvalido() {
+    void idEnBlancoEsInvalido() {                      // CP-25
         // Act & Assert: segunda parte del ||, distinta del null
         assertThrows(
                 IllegalArgumentException.class,
@@ -42,7 +42,7 @@ class ReservaTest {
     }
 
     @Test
-    void tipoNuloSeAsumeNormal() {
+    void tipoNuloSeAsumeNormal() {                     // CP-26
         // Act
         Reserva reserva = new Reserva("R-002", null);
 
@@ -51,7 +51,7 @@ class ReservaTest {
     }
 
     @Test
-    void cancelarCambiaElEstadoACancelada() {
+    void cancelarCambiaElEstadoACancelada() {          // CP-27
         // Arrange
         Reserva reserva = new Reserva("R-003", "NORMAL");
 

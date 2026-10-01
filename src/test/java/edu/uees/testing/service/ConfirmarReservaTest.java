@@ -44,7 +44,7 @@ class ConfirmarReservaTest {
     }
 
     @Test
-    void reservaDisponibleSeConfirmaGuardaYNotifica() {
+    void reservaDisponibleSeConfirmaGuardaYNotifica() { // CP-16
         // Arrange
         when(disponibilidad.estaDisponible(any())).thenReturn(true);   // Stub
         Reserva reserva = new Reserva("R-001", "NORMAL");
@@ -59,7 +59,7 @@ class ConfirmarReservaTest {
     }
 
     @Test
-    void reservaNoDisponibleNoSeGuardaNiNotifica() {
+    void reservaNoDisponibleNoSeGuardaNiNotifica() {   // CP-17
         // Arrange
         when(disponibilidad.estaDisponible(any())).thenReturn(false);  // Stub
         Reserva reserva = new Reserva("R-002", "NORMAL");
@@ -77,7 +77,7 @@ class ConfirmarReservaTest {
     }
 
     @Test
-    void reservaNulaNoConsultaDependencias() {
+    void reservaNulaNoConsultaDependencias() {         // CP-18
         // Act
         IllegalArgumentException ex = assertThrows(
                 IllegalArgumentException.class,
@@ -91,7 +91,7 @@ class ConfirmarReservaTest {
     }
 
     @Test
-    void consultaLaDisponibilidadDeLaMismaReserva() {
+    void consultaLaDisponibilidadDeLaMismaReserva() {  // CP-19
         // Arrange
         Reserva reserva = new Reserva("R-003", "VIP");
         when(disponibilidad.estaDisponible(reserva)).thenReturn(true);
@@ -104,7 +104,7 @@ class ConfirmarReservaTest {
     }
 
     @Test
-    void guardaAntesDeNotificar() {
+    void guardaAntesDeNotificar() {                    // CP-20
         // Arrange
         when(disponibilidad.estaDisponible(any())).thenReturn(true);
         Reserva reserva = new Reserva("R-004", "NORMAL");
@@ -119,7 +119,7 @@ class ConfirmarReservaTest {
     }
 
     @Test
-    void sinDisponibilidadNoSeTocanRepositorioNiNotificador() {
+    void sinDisponibilidadNoSeTocanRepositorioNiNotificador() { // CP-21
         // Arrange
         when(disponibilidad.estaDisponible(any())).thenReturn(false);
         Reserva reserva = new Reserva("R-005", "NORMAL");
@@ -132,7 +132,7 @@ class ConfirmarReservaTest {
     }
 
     @Test
-    void siGuardarFallaNoSeNotificaAlEstudiante() {
+    void siGuardarFallaNoSeNotificaAlEstudiante() {    // CP-22
         // Arrange: hueco que la cobertura no muestra (todas las lineas ya
         // estaban en verde). Simulo una falla del repositorio.
         when(disponibilidad.estaDisponible(any())).thenReturn(true);

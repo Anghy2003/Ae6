@@ -61,3 +61,23 @@ git switch test/lab2-dobles-cobertura
 mvn clean test                       # 28 pruebas, BUILD SUCCESS
 start target/site/jacoco/index.html  # 100 % lineas y ramas
 ```
+
+---
+
+## Ae6 · Suite de pruebas, cobertura y Pull Request
+
+Rama: `ae6/suite-pruebas` (desde `main`, que ya integra la Actividad 2). Pull Request: `ae6/suite-pruebas` → `main`.
+
+| Entregable | Dónde |
+|---|---|
+| Matriz de casos (6 reglas, 28 casos) | [`docs/01_MATRIZ_CASOS_PLANTILLA.md`](docs/01_MATRIZ_CASOS_PLANTILLA.md) |
+| Suite JUnit 5 (29 pruebas, AAA, Stub/Mock) | `src/test/java/edu/uees/testing/` |
+| Análisis de cobertura JaCoCo | [`docs/02_ANALISIS_COBERTURA_PLANTILLA.md`](docs/02_ANALISIS_COBERTURA_PLANTILLA.md) |
+| Texto del Pull Request | [`docs/03_PULL_REQUEST_PLANTILLA.md`](docs/03_PULL_REQUEST_PLANTILLA.md) |
+| Autorrevisión | [`docs/ae6/04_AUTORREVISION.md`](docs/ae6/04_AUTORREVISION.md) |
+| Evidencia (CSV, experimento de errores, capturas) | `docs/ae6/` |
+
+```bash
+git switch ae6/suite-pruebas
+mvn clean test    # Tests run: 29, Failures: 0 -> BUILD SUCCESS; 100 % lineas y ramas
+```
