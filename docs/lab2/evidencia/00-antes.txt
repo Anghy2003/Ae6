@@ -1,0 +1,50 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] -----------------< edu.uees:semana7-proyecto-base-ae6 >-----------------
+[INFO] Building semana7-proyecto-base-ae6 1.0.0
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- clean:3.2.0:clean (default-clean) @ semana7-proyecto-base-ae6 ---
+[INFO] Deleting C:\Users\Angie\Documents\UESS\semana7-junit-casos\target
+[INFO] 
+[INFO] --- jacoco:0.8.12:prepare-agent (default) @ semana7-proyecto-base-ae6 ---
+[INFO] argLine set to -javaagent:C:\\Users\\Angie\\.m2\\repository\\org\\jacoco\\org.jacoco.agent\\0.8.12\\org.jacoco.agent-0.8.12-runtime.jar=destfile=C:\\Users\\Angie\\Documents\\UESS\\semana7-junit-casos\\target\\jacoco.exec
+[INFO] 
+[INFO] --- resources:3.4.0:resources (default-resources) @ semana7-proyecto-base-ae6 ---
+[INFO] skip non existing resourceDirectory C:\Users\Angie\Documents\UESS\semana7-junit-casos\src\main\resources
+[INFO] 
+[INFO] --- compiler:3.15.0:compile (default-compile) @ semana7-proyecto-base-ae6 ---
+[INFO] Recompiling the module because of changed source code.
+[INFO] Compiling 6 source files with javac [debug target 21] to target\classes
+[INFO] 
+[INFO] --- resources:3.4.0:testResources (default-testResources) @ semana7-proyecto-base-ae6 ---
+[INFO] skip non existing resourceDirectory C:\Users\Angie\Documents\UESS\semana7-junit-casos\src\test\resources
+[INFO] 
+[INFO] --- compiler:3.15.0:testCompile (default-testCompile) @ semana7-proyecto-base-ae6 ---
+[INFO] Recompiling the module because of changed dependency.
+[INFO] Compiling 1 source file with javac [debug target 21] to target\test-classes
+[INFO] 
+[INFO] --- surefire:3.2.5:test (default-test) @ semana7-proyecto-base-ae6 ---
+[INFO] Using auto detected provider org.apache.maven.surefire.junitplatform.JUnitPlatformProvider
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running edu.uees.testing.service.ReservaServiceTest
+[INFO] Tests run: 16, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.087 s -- in edu.uees.testing.service.ReservaServiceTest
+[INFO] 
+[INFO] Results:
+[INFO] 
+[INFO] Tests run: 16, Failures: 0, Errors: 0, Skipped: 0
+[INFO] 
+[INFO] 
+[INFO] --- jacoco:0.8.12:report (report) @ semana7-proyecto-base-ae6 ---
+[INFO] Loading execution data file C:\Users\Angie\Documents\UESS\semana7-junit-casos\target\jacoco.exec
+[INFO] Analyzed bundle 'semana7-proyecto-base-ae6' with 3 classes
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  3.534 s
+[INFO] Finished at: 2026-09-30T22:33:43-05:00
+[INFO] ------------------------------------------------------------------------
