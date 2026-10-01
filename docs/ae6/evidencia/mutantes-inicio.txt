@@ -1,0 +1,14 @@
+ID | Error introducido | Resultado | Pruebas que fallaron
+M01 | Cancelación: >= cambiado por > | DETECTADO | ReservaServiceTest.dosHorasEsElLimitePermitido
+M02 | Total cero tratado como inválido | DETECTADO | ReservaServiceTest.totalCeroEsValidoYDevuelveCero
+M03 | Validación de negativos corrida | DETECTADO | ReservaServiceTest.totalApenasNegativoTambienEsInvalido, ReservaServiceTest.totalNegativoEsInvalido
+M04 | VIP recibe el factor de ESTUDIANTE | DETECTADO | ReservaServiceTest.tipoVipEnMinusculaTambienRecibeDescuento, ReservaServiceTest.vipRecibeQuincePorCiento
+M05 | ESTUDIANTE recibe el factor de VIP | DETECTADO | ReservaServiceTest.estudianteRecibeDiezPorCiento
+M06 | VIP sensible a mayúsculas | DETECTADO | ReservaServiceTest.tipoVipEnMinusculaTambienRecibeDescuento
+M07 | ESTUDIANTE sensible a mayúsculas | SOBREVIVE | -
+M08 | confirmar() no cambia el estado | DETECTADO | ConfirmarReservaTest.reservaDisponibleSeConfirmaGuardaYNotifica
+M09 | Notifica antes de guardar | DETECTADO | ConfirmarReservaTest.guardaAntesDeNotificar, ConfirmarReservaTest.siGuardarFallaNoSeNotificaAlEstudiante
+M10 | Ignora la disponibilidad | DETECTADO | ConfirmarReservaTest.consultaLaDisponibilidadDeLaMismaReserva, ConfirmarReservaTest.reservaNoDisponibleNoSeGuardaNiNotifica, ConfirmarReservaTest.sinDisponibilidadNoSeTocanRepositorioNiNotificador
+M11 | Acepta id en blanco | DETECTADO | ReservaTest.idEnBlancoEsInvalido
+M12 | Tipo por defecto incorrecto | DETECTADO | ReservaTest.tipoNuloSeAsumeNormal
+Detectados: 11 de 12

@@ -47,19 +47,20 @@ comentario.
 | CP-25 | R6 | Id en blanco | `"   "` | `IllegalArgumentException` | Límite / inválido | Segunda parte del `\|\|` | — |
 | CP-26 | R6 | Tipo nulo | `R-002`, `null` | tipo `NORMAL` | Alternativo | Valor por defecto | — |
 | CP-27 | R6 | Cancelar | `R-003` | CANCELADA | Normal | Transición de estado | — |
+| CP-28 | R2 | ESTUDIANTE en minúscula | `estudiante`, 100 | 90 | Alternativo | `equalsIgnoreCase` en la rama ESTUDIANTE. **Agregado en Ae6 a partir del análisis de cobertura** | — |
 
 ## Resumen
 
 | Tipo | Casos |
 |---|---|
 | Normal | CP-01, CP-07, CP-16, CP-23, CP-27 |
-| Alternativo | CP-08, CP-09, CP-13, CP-14, CP-17, CP-21, CP-26 |
+| Alternativo | CP-08, CP-09, CP-13, CP-14, CP-17, CP-21, CP-26, CP-28 |
 | Límite | CP-02, CP-03, CP-06, CP-10, CP-12, CP-25 |
 | Extremo | CP-04 |
 | Inválido / excepción | CP-05, CP-11, CP-15, CP-18, CP-22, CP-24 |
 | Interacción | CP-19, CP-20 |
 
-27 casos (mínimo recomendado: 10). Los mínimos del enunciado están cubiertos:
+28 casos (mínimo recomendado: 10). CP-28 se agregó después del análisis de cobertura. Los mínimos del enunciado están cubiertos:
 cancelación normal, límite válido y límite inválido (CP-01, CP-02, CP-03);
 NORMAL, VIP, ESTUDIANTE y negativo (CP-07, CP-08, CP-09, CP-11); disponible,
 no disponible y nula (CP-16, CP-17, CP-18).

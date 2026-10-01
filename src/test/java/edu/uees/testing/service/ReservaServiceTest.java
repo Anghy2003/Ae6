@@ -168,6 +168,18 @@ class ReservaServiceTest {
     }
 
     @Test
+    void estudianteEnMinusculaTambienRecibeDescuento() {       // CP-28
+        // Agregada en Ae6: con 100 % de cobertura, cambiar equalsIgnoreCase
+        // por equals en la rama ESTUDIANTE no hacia fallar ninguna prueba.
+
+        // Act
+        double total = servicio.calcularTotal("estudiante", 100);
+
+        // Assert
+        assertEquals(90.0, total, DELTA);
+    }
+
+    @Test
     void tipoDesconocidoNoRecibeDescuento() {                  // CP-14
         // Act
         double total = servicio.calcularTotal("PREMIUM", 100);
