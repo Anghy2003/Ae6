@@ -28,7 +28,7 @@ Primero diseña el caso, luego implementa la prueba y finalmente interpreta el r
 
 ## Actividad 1 · Laboratorio de diseño de casos y JUnit 5
 
-Autora: Andrea Illescas · Diseño de Software (UCOM0310) · Semana 7
+Autora: Andrea Illescas · Diseño de Software (UCOM0310) · Semana 7 · Repositorio: https://github.com/Anghy2003/Ae6
 
 | Entregable | Dónde |
 |---|---|
